@@ -9,7 +9,7 @@ main: $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@      
 
 # $< means the first prerequisite in current rule, which is main.c
-main.o: main.c
+main.o: main.c coroutine.h
 	$(CC) $(CFLAGS) $< -c -o $@
 
 .PHONY: clean
